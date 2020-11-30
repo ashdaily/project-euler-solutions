@@ -8,13 +8,16 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 const findSolution = (number1, number2)=> {
     let sumOfAllMutiples = 0;
-    let i =  0;
-    while (i < 1000){
-        if(i % number1 === 0 || i % number2 === 0){
-            sumOfAllMutiples += i;
+    let counter =  0;
+    let limit = 1000;
+
+    while (counter < limit){
+        if(counter % number1 === 0 || counter % number2 === 0){
+            sumOfAllMutiples += counter;
         }
-        i += 1;
+        counter += 1;
     }
+
     return sumOfAllMutiples;
 }
 
