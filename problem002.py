@@ -16,16 +16,16 @@ def sum_of_even_value_of_fibbonacci_series(starting_number_1: int, starting_numb
     upper_limit = 4000000
     counter =  1
     sum_of_fibonacci_series = 0
-
-    while counter <= upper_limit - 1:
-        # just for debug
-        
+    while True:
         sum_of_last_two_numbers = starting_number_2 + starting_number_1
         if _is_even(starting_number_2):
                 sum_of_fibonacci_series += starting_number_2
 
         starting_number_1 = starting_number_2
         starting_number_2 = sum_of_last_two_numbers
+
+        if starting_number_2 > upper_limit:
+            break
         
         counter += 1
 
